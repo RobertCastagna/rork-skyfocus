@@ -26,8 +26,14 @@ export default function BoardingScreen() {
 
   const gate = useRef(generateGate()).current;
   const seat = useRef(generateSeat()).current;
-  const now = new Date();
-  const arrivalTime = route ? new Date(now.getTime() + route.durationMinutes * 60000) : now;
+  const barcodeLines = useRef(
+    Array.from({ length: 30 }).map(() => ({
+      width: Math.random() > 0.5 ? 3 : 1.5,
+      opacity: 0.3 + Math.random() * 0.7,
+    }))
+  ).current;
+  const now = useRef(new Date()).current;
+  const arrivalTime = useRef(route ? new Date(now.getTime() + (route?.durationMinutes ?? 0) * 60000) : now).current;
 
   useEffect(() => {
     Animated.parallel([

@@ -51,6 +51,7 @@ export default function LandingScreen() {
         Math.floor(Math.random() * 6)
       ],
       size: 6 + Math.random() * 8,
+      travelY: 200 + Math.random() * 300,
     }))
   ).current;
 
@@ -73,7 +74,7 @@ export default function LandingScreen() {
                   {
                     translateY: confettiAnim.interpolate({
                       inputRange: [0, 1],
-                      outputRange: [-50, 200 + Math.random() * 300],
+                      outputRange: [-50, piece.travelY],
                     }),
                   },
                 ],
