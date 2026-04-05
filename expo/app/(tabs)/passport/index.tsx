@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   statBox: {
-    width: '48%' as unknown as number,
+    width: '48%',
     flexGrow: 1,
     flexBasis: '45%',
     backgroundColor: Colors.cardBg,
@@ -249,10 +249,10 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   stamp: {
-    width: '30%' as unknown as number,
+    width: '30%',
     flexGrow: 1,
     flexBasis: '30%',
-    maxWidth: '32%' as unknown as number,
+    maxWidth: '32%',
   },
   stampLocked: {
     opacity: 0.5,

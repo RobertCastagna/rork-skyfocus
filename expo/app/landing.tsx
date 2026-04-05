@@ -64,7 +64,7 @@ export default function LandingScreen() {
             style={[
               styles.confetti,
               {
-                left: `${piece.left}%` as unknown as number,
+                left: `${piece.left}%`,
                 width: piece.size,
                 height: piece.size,
                 backgroundColor: piece.color,

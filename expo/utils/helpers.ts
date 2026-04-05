@@ -16,6 +16,7 @@ export function getRankEmoji(rank: PilotRank): string {
     case 'Captain': return '✈️';
     case 'Co-Pilot': return '🛫';
     case 'Cadet': return '🎓';
+    default: return '🎓';
   }
 }
 
@@ -47,7 +48,7 @@ export function generateSeat(): string {
 }
 
 export function generateId(): string {
-  return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 11);
 }
 
 export function interpolateCoords(

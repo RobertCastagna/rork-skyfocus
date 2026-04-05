@@ -30,7 +30,12 @@ export const [AppProvider, useApp] = createContextHook(() => {
     queryKey: ['profile'],
     queryFn: async () => {
       const stored = await AsyncStorage.getItem(STORAGE_KEYS.profile);
-      return stored ? (JSON.parse(stored) as UserProfile) : DEFAULT_PROFILE;
+      if (!stored) return DEFAULT_PROFILE;
+      try {
+        return JSON.parse(stored) as UserProfile;
+      } catch {
+        return DEFAULT_PROFILE;
+      }
     },
   });
 
@@ -38,7 +43,12 @@ export const [AppProvider, useApp] = createContextHook(() => {
     queryKey: ['flightLog'],
     queryFn: async () => {
       const stored = await AsyncStorage.getItem(STORAGE_KEYS.flightLog);
-      return stored ? (JSON.parse(stored) as FlightLog[]) : [];
+      if (!stored) return [];
+      try {
+        return JSON.parse(stored) as FlightLog[];
+      } catch {
+        return [];
+      }
     },
   });
 
@@ -46,7 +56,12 @@ export const [AppProvider, useApp] = createContextHook(() => {
     queryKey: ['activeFlight'],
     queryFn: async () => {
       const stored = await AsyncStorage.getItem(STORAGE_KEYS.activeFlight);
-      return stored ? (JSON.parse(stored) as ActiveFlight) : null;
+      if (!stored) return null;
+      try {
+        return JSON.parse(stored) as ActiveFlight;
+      } catch {
+        return null;
+      }
     },
   });
 

@@ -77,7 +77,7 @@ export default function FlightScreen() {
         completed: true,
         stampEarned: true,
       });
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         router.replace({
           pathname: '/landing',
           params: {
@@ -87,6 +87,7 @@ export default function FlightScreen() {
           },
         });
       }, 1500);
+      return () => clearTimeout(timer);
     }
   }, [isComplete, activeFlight, completeFlight, router]);
 
