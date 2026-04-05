@@ -148,12 +148,12 @@ export default function BoardingScreen() {
 
           <View style={styles.barcodeSection}>
             <View style={styles.barcode}>
-              {Array.from({ length: 30 }).map((_, i) => (
+              {barcodeLines.map((line, i) => (
                 <View
                   key={i}
                   style={[
                     styles.barcodeLine,
-                    { width: Math.random() > 0.5 ? 3 : 1.5, opacity: 0.3 + Math.random() * 0.7 },
+                    { width: line.width, opacity: line.opacity },
                   ]}
                 />
               ))}
