@@ -6,6 +6,7 @@
     "package-lock.json",
     "babel.config.js",
     "package.json",
+    "credentials.json",
     ".gitignore",
     "eslint.config.js",
     "README.md",
