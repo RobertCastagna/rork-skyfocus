@@ -15,7 +15,13 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "app.rork.xpyexmf5zzwqg4eon72m6"
+      "bundleIdentifier": "app.tminus.xpyexmf5zzwqg4eon72m6",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {

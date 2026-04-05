@@ -43,3 +43,7 @@ yarn-error.*
 core
 node_modules
 .expo
+
+# iOS Signing Credentials
+credentials.json
+certs/*

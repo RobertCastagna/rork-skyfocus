@@ -19,6 +19,7 @@ let MapMarker: any;
 let PROVIDER_GOOGLE: any;
 if (Platform.OS !== 'web') {
   try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     const maps = require('react-native-maps');
     MapView = maps.default;
     MapPolyline = maps.Polyline;

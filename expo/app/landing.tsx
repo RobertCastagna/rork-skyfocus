@@ -86,7 +86,7 @@ export default function LandingScreen() {
           <Text style={styles.planeEmoji}>🛬</Text>
         </Animated.View>
 
-        <Text style={styles.title}>You've Arrived!</Text>
+        <Text style={styles.title}>{"You've Arrived!"}</Text>
         <Text style={styles.subtitle}>
           Welcome to {toCity?.name ?? 'your destination'} {toCity?.icon}
         </Text>
